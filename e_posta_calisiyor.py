@@ -68,16 +68,7 @@ def send_emails_from_excel(subject):
         
             # Her e-posta gönderiminden sonra bekleme süresi
             time.sleep(2)  # 2 saniye bekleme
-"""
-    for row in sheet.iter_rows(min_row=2, values_only=True):  # Başlık satırını atla
-        email, name, surname = row[:3]  # İlk üç sütun sırasıyla Email, Name, Surname
-        if email :
-            personalized_message = MESSAGE_TEXT.format(name=name, surname=surname)
-            send_email(service, email, subject, personalized_message)
-            
-            # Her e-posta gönderiminden sonra bekleme süresi
-            time.sleep(2)  # 2 saniye bekleme
-"""
+
 if __name__ == "__main__":
     subject = input("E-postaların konusu: ")
     send_emails_from_excel(subject)
